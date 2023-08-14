@@ -16,6 +16,7 @@ import java.util.Arrays;
 public class TestConfig implements CommandLineRunner {
     @Autowired
     private IAdminSistemaRepository adminSistemaRepository;
+    @Autowired IUsuarioBaseRespository usuarioBaseRespository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -23,7 +24,14 @@ public class TestConfig implements CommandLineRunner {
                 new UsuarioAdminSistema("Andre", "Alves", "andre@gmail.com", "123",
                 new DataNascimento("05", "04", "2003")
         );
+        UsuarioBase usr01 =
+                new UsuarioBase("Ivan","Alves","Ivan@gmail.com","123",
+                Cargo.UsuarioConsumidor,
+                new DataNascimento("06","08","2003")
+        );
 
         adminSistemaRepository.saveAll(Arrays.asList(adm1));
+        usuarioBaseRespository.saveAll(Arrays.asList(usr01));
+
     }
 }
