@@ -41,6 +41,14 @@ public class UsuarioBase {
         this.dataNascimento = dataNascimento;
     }
 
+    public UsuarioBase(String nome, String sobrenome, String email, String senha,DataNascimento dataNascimento) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.senha = senha;
+        this.dataNascimento = dataNascimento;
+    }
+
     public UsuarioBase() {
 
     }

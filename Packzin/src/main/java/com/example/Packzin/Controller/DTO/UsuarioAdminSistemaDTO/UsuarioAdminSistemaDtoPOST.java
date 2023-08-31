@@ -9,11 +9,12 @@ public class UsuarioAdminSistemaDtoPOST {
     private String senha;
     private String cargo;
 
-    public UsuarioAdminSistemaDtoPOST(String nome, String sobrenome, String email, String senha) {
+    public UsuarioAdminSistemaDtoPOST(String nome, String sobrenome, String email, String senha, String cargo) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.senha = senha;
+        this.cargo = "UsuarioAdminSistema";
     }
 
     public UsuarioAdminSistemaDtoPOST(){}
@@ -50,11 +51,4 @@ public class UsuarioAdminSistemaDtoPOST {
         this.senha = senha;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
 }
