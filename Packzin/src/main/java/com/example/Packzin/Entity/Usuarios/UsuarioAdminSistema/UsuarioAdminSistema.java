@@ -4,7 +4,7 @@ import com.example.Packzin.Entity.Usuarios.UsuarioBase.Cargo.Cargo;
 import com.example.Packzin.Entity.Usuarios.UsuarioBase.DataNascimento.DataNascimento;
 import com.example.Packzin.Entity.Usuarios.UsuarioBase.UsuarioBase;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "AdminSistema_tb")

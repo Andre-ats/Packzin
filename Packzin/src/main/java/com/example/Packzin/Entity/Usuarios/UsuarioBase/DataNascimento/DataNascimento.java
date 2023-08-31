@@ -1,20 +1,17 @@
 package com.example.Packzin.Entity.Usuarios.UsuarioBase.DataNascimento;
 
-import com.sun.istack.NotNull;
+import jakarta.persistence.*;
 
-import javax.persistence.*;
 
 @Entity
 @Table(name = "DataNascimento")
 public class DataNascimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long dataNascimentoID;
-    @NotNull
     private String dia;
-    @NotNull
     private String mes;
-    @NotNull
     private String ano;
 
     public DataNascimento(String dia, String mes, String ano) {

@@ -2,8 +2,7 @@ package com.example.Packzin.Entity.Usuarios.UsuarioBase;
 
 import com.example.Packzin.Entity.Usuarios.UsuarioBase.Cargo.Cargo;
 import com.example.Packzin.Entity.Usuarios.UsuarioBase.DataNascimento.DataNascimento;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -11,11 +10,22 @@ import javax.persistence.*;
 public class UsuarioBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id", nullable = false, length = 50)
     private Long id;
+
+    @Column(name = "nome", nullable = false, length = 50)
     private String nome;
+
+    @Column(name = "sobrenome", nullable = false, length = 50)
     private String sobrenome;
+
+    @Column(name = "email", nullable = false, length = 50)
     private String email;
+    @Column(name = "senha", nullable = false, length = 50)
     private String senha;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "cargo", length = 50)
     private Cargo cargo;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "dataNascimentoID")
