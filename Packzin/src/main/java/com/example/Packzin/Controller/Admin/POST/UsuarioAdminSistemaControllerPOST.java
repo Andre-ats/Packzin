@@ -1,7 +1,7 @@
 package com.example.Packzin.Controller.Admin.POST;
 
 import com.example.Packzin.Controller.DTO.Mapper.UsuarioAdminSistemaMapper;
-import com.example.Packzin.Controller.DTO.UsuarioAdminSistemaDTO.UsuarioAdminSistemaDtoPOST;
+import com.example.Packzin.Controller.DTO.UsuarioAdminSistemaDTO.POST.PostUsuarioAdminSistemaInput;
 import com.example.Packzin.Entity.Usuarios.UsuarioAdminSistema.UsuarioAdminSistema;
 import com.example.Packzin.Service.UsuarioAdminSistemaService.POST.UsuarioAdminSistemaServicePOST;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ public class UsuarioAdminSistemaControllerPOST {
     private UsuarioAdminSistemaServicePOST usuarioAdminSistemaServicePOST;
 
     @PostMapping("/postUsuarioAdminSistema")
-    public ResponseEntity<UsuarioAdminSistemaDtoPOST> postUsuarioAdminSistema(@RequestBody UsuarioAdminSistemaDtoPOST usuarioAdminSistemaDtoPOST){
-        UsuarioAdminSistema usuarioAdminSistema1 = usuarioAdminSistemaServicePOST.postUsuarioAdminSistema(UsuarioAdminSistemaMapper.toUsuarioAdminSistema(usuarioAdminSistemaDtoPOST));
+    public ResponseEntity<PostUsuarioAdminSistemaInput> postUsuarioAdminSistema(@RequestBody PostUsuarioAdminSistemaInput postUsuarioAdminSistemaInput){
+        UsuarioAdminSistema usuarioAdminSistema1 = usuarioAdminSistemaServicePOST.postUsuarioAdminSistema(UsuarioAdminSistemaMapper.toUsuarioAdminSistema(postUsuarioAdminSistemaInput));
         return ResponseEntity.status(HttpStatus.CREATED).body(UsuarioAdminSistemaMapper.toUsuarioAdminSistemaDtoPOST(usuarioAdminSistema1));
     }
 }

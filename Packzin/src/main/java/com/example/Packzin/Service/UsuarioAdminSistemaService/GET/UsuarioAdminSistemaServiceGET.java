@@ -14,8 +14,7 @@ public class UsuarioAdminSistemaServiceGET {
     @Autowired
     private IAdminSistemaRepository iAdminSistemaRepository;
 
-    public ResponseEntity<List<UsuarioAdminSistema>> getTodosAdminSistema(){
-        List<UsuarioAdminSistema> usuarioAdminSistema = iAdminSistemaRepository.findAll();
-        return ResponseEntity.ok().body(usuarioAdminSistema);
+    public List<UsuarioAdminSistema> getTodosAdminSistema(){
+        return iAdminSistemaRepository.findAll();
     }
 }

@@ -1,23 +1,19 @@
-package com.example.Packzin.Controller.DTO.UsuarioAdminSistemaDTO;
+package com.example.Packzin.Controller.DTO.UsuarioAdminSistemaDTO.POST;
 
-import com.example.Packzin.Entity.Usuarios.UsuarioBase.Cargo.Cargo;
-
-public class UsuarioAdminSistemaDtoPOST {
+public class PostUsuarioAdminSistemaInput {
     private String nome;
     private String sobrenome;
     private String email;
     private String senha;
-    private String cargo;
 
-    public UsuarioAdminSistemaDtoPOST(String nome, String sobrenome, String email, String senha, String cargo) {
+    public PostUsuarioAdminSistemaInput(String nome, String sobrenome, String email, String senha, String cargo) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.senha = senha;
-        this.cargo = "UsuarioAdminSistema";
     }
 
-    public UsuarioAdminSistemaDtoPOST(){}
+    public PostUsuarioAdminSistemaInput(){}
 
     public String getNome() {
         return nome;

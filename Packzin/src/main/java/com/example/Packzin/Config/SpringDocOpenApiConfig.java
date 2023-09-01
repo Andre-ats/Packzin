@@ -15,8 +15,7 @@ public class SpringDocOpenApiConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("REST API - Spring Park")
-                                .description("API")
+                                .title("LovZin - API")
                                 .version("v1")
                 );
     }
